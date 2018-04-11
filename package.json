@@ -1,0 +1,23 @@
+{
+  "name": "sncfdd",
+  "version": "1.0.0",
+  "description": "Simplest Node JS Cloudflare DynDNS client",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belsierre/sncfdd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belsierre/sncfdd/issues"
+  },
+  "homepage": "https://github.com/belsierre/sncfdd#readme",
+  "devDependencies": {
+    "request": "^2.85.0"
+  }
+}
