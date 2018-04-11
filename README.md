@@ -2,6 +2,8 @@
 Simplest Node JS Cloudflare DynDNS client
 Using Cloudflare API (https://www.cloudflare.com) and ipify (https://www.ipify.org/)
 
+Updates a Cloudflare record with the IP from which its executed.
+
 ## Install
 ```
 git clone https://github.com/belsierre/sncfdd.git
