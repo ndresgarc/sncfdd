@@ -1,37 +1,50 @@
 # SNCFDD
-Simplest Node JS Cloudflare DynDNS client
-Using Cloudflare API (https://www.cloudflare.com) and ipify (https://www.ipify.org/)
+
+~~Simplest~~ Simple Node JS Cloudflare DynDNS client using Cloudflare API (https://www.cloudflare.com) and Ipify (https://www.ipify.org/)
 
 Updates a Cloudflare record with the IP from which its executed.
 
-## Install
-```
-git clone https://github.com/belsierre/sncfdd.git
-cd sncfdd
-npm install
-```
+
+## Download
+
+You can clone the repository or download the script from:
+https://raw.githubusercontent.com/ndresgarc/sncfdd/master/client.js
+
 
 ## Config
-Open client.js with your favourite example and edit the `cf` JSON object with your data.
+
+Create a file named config.json or copy example.config.json from the repository (https://raw.githubusercontent.com/ndresgarc/sncfdd/master/example.config.json)
+
 ```
-var cf = {
-  authKey: '',
-  email: '',
-  recordDns: '',
-  recordId: '',
-  zoneId: ''
-};
+{
+	"cloudflare": {
+		"domains": [
+			{
+				"name": "subdomain.domain.com",
+				"type": "A",
+				"recordId": "49411e94adb54e45a4c693e4b822973c", // Randomly generated, just as an example
+				"zoneId": "49411e94adb54e45a4c693e4b822973c" // Randomly generated, just as an example
+			}
+		],
+		"email": "myemail@domain.com", // Cloudflare credentials
+		"key": "49411e94adb54e45a4c693e4b822973c" // Randomly generated, just as an example, not a real key
+	},
+	"saveIp": true,
+	"log": true
+}
 ```
 
 ## Run
+
 ```
 node client.js
 ```
+
+
 ## Schedule
+
 Example for executing it each 15 minutes in Debian:
+
 ```
 */15 * * * * node /path/to/client.js
 ```
-
-## ToDo
-+ Scripted WOW like www.pivpn.io
