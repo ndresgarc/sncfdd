@@ -29,17 +29,10 @@ You'll need to generate an API Token in CLoudflare with the following permission
 				"type": "A",
 				"recordId": "49411e94adb54e45a4c693e4b822973c", // Randomly generated, just as an example
 				"zoneId": "49411e94adb54e45a4c693e4b822973c" // Randomly generated, just as an example
-			},
-			{
-				"name": "",
-				"type": "",
-				"recordId": "",
-				"zoneId": ""
 			}
-			...
 		],
 		"email": "myemail@domain.com", // Cloudflare credentials
-		"key": "49411e94adb54e45a4c693e4b822973c" // Randomly generated, just as an example, not a real key
+		"token": "49411e94adb54e45a4c693e4b822973c" // Randomly generated, just as an example, not a real key
 	},
 	"saveIp": true,
 	"log": true
