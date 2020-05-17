@@ -9,7 +9,7 @@
 			}
 		],
 		"email": "myemail@domain.com", // Cloudflare credentials
-		"key": "49411e94adb54e45a4c693e4b822973c" // Randomly generated, just as an example, not a real key
+		"token": "49411e94adb54e45a4c693e4b822973c" // Randomly generated, just as an example, not a real key
 	},
 	"saveIp": true,
 	"log": true

@@ -15,7 +15,7 @@ function loopAndUpdate(ip, callback) {
 		config.cloudflare.domains.forEach(function(domain){
 			updateCloudflareRegister(
 				config.cloudflare.email,
-				config.cloudflare.key,
+				config.cloudflare.token,
 				ip,
 				domain.name,
 				domain.type,
@@ -27,7 +27,7 @@ function loopAndUpdate(ip, callback) {
 	callback();
 }
 
-function updateCloudflareRegister(email, key, ip, domain, type, zone, record) {
+function updateCloudflareRegister(email, token, ip, domain, type, zone, record) {
 	const options = {
 		hostname: 'api.cloudflare.com',
 		port: 443,
@@ -35,23 +35,12 @@ function updateCloudflareRegister(email, key, ip, domain, type, zone, record) {
 		method: 'PUT',
 		headers: {
 			'Content-Type': 'application/json',
-			'X-Auth-Email': email,
-			'X-Auth-Key': key
+			'Authorization': 'Bearer ' + token
 		}
 	};
 	var request =
 		https.request(
-			{
-				hostname: 'api.cloudflare.com',
-				port: 443,
-				path: '/client/v4/zones/' + zone + '/dns_records/' + record,
-				method: 'PUT',
-				headers: {
-					'Content-Type': 'application/json',
-					'X-Auth-Email': email,
-					'X-Auth-Key': key
-				}
-			},
+			options,
 			(response) => {
 				log(`statusCode: ${response.statusCode}`)
 				response.on('data', (d) => {

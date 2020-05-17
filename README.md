@@ -16,6 +16,8 @@ https://raw.githubusercontent.com/ndresgarc/sncfdd/master/client.js
 
 Create a file named config.json or copy example.config.json from the repository
 
+You'll need to generate an API Token in CLoudflare with the following permissions: **All zones - Zone Settings:Edit, DNS:Edit**
+
 (https://raw.githubusercontent.com/ndresgarc/sncfdd/master/example.config.json)
 
 ```
